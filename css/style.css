@@ -1,0 +1,225 @@
+/* 배경동영상 */
+.vid{
+    position: fixed;
+    top: -7px; left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+}
+
+.vid>iframe{
+    position: absolute;
+    top: 0; left: -153px;
+}
+
+
+/* 로고 */
+.logo{position: fixed; top: 23px; left: 19px; z-index: 10;
+}
+.logo>a{}
+.logo>a>img{
+    width: 305px; height: 134px;
+}
+
+/* 헤더 */
+
+/* https://cssgradient.io/ */
+
+header{
+    width: 700px; height: 100vh;
+    background: rgb(222,202,223);
+    background: linear-gradient(121deg, rgba(222,202,223,1) 0%, rgba(160,197,199,1) 100%);
+    position: fixed; top: 0; left: -450px;
+    z-index: 3;
+    transform: skewX(-40deg);
+}
+#gnb{
+    position: absolute;
+    top: 190px; right: 0;
+    width: 220px;
+
+}
+/* 1depth */
+#gnb>li{position: relative;}
+#gnb>li>a{
+    display: block;
+    width: 100%;
+    padding: 15px 0 15px 30px;
+    box-sizing: border-box;
+    font: 18px 'arial';
+    color: #111;
+}
+#gnb em{
+    display: block;
+    transform: skewX(40deg);
+}
+/* 2depth */
+#gnb>li>ul{
+   position: absolute; top: 0; left: 0;
+   transition: all 0.5s;
+   opacity: 0;
+}
+
+#gnb>li>ul>li>a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    font: bold 16px/40px 'arial';
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    border-bottom: 4px solid rgba(0,212,255,1); 
+    transition: all 0.5s;
+}
+
+
+/* gnb 호버효과 */
+#gnb>li.on>a{
+    background-color: #111;
+    color: #fff;
+}
+#gnb>li:hover>a{
+    background-color: #111;
+    color: #fff;
+}
+
+#gnb>li.on>ul{
+    left: 220px;
+    opacity: 0.9;
+}
+#gnb>li:hover>ul{
+    left: 220px;
+    opacity: 0.9;
+}
+
+
+/* sns */
+#sns{
+    position: fixed;
+    top: 60px; right: 50px;
+    z-index: 8;
+    display: flex;
+}
+#sns>li{margin-right: 20px;}
+#sns>li>a{}
+#sns>li>a>i{
+    font-size: 28px; color: #fff; opacity: 0.7;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+
+/* 호버효과 */
+#sns>li>a>i:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* 캐릭터 선택 버튼 */
+.btn_list{
+    position: fixed;
+    bottom: 70px;
+    left: 240px;
+    display: flex;
+    z-index: 6;
+}
+.btn_list li{margin-right: 8px;
+    width: 112px;
+    height: 66px;
+    /* background-color: #111; */
+}
+.btn_list a{
+    display: block;
+    width: 112px;
+    height: 66px;
+}
+
+.btn_list .ch1{
+    background: url('../img/Untitled-1.png') no-repeat -13px -103px;
+}
+.btn_list .ch2{
+    background: url('../img/Untitled-1.png') no-repeat -146px -103px;
+
+}
+.btn_list .ch3{
+    background: url('../img/Untitled-1.png') no-repeat -272px -103px;
+
+}
+
+/* 활성화
+http://www.spritecow.com/
+*/
+.btn_list>li.on .ch1{
+    background: url('../img/Untitled-1.png') no-repeat -13px -12px;
+}
+
+.btn_list>li.on .ch2{
+    background: url('../img/Untitled-1.png') no-repeat -146px -12px;
+
+}
+.btn_list>li.on .ch3{
+    background: url('../img/Untitled-1.png') no-repeat -272px -12px;
+
+}
+
+/* 캐릭터 텍스트 */
+.title{}
+.title li{position: fixed; bottom: 170px; left: 0px; opacity: 0; transition: all 0.5s; z-index: 5;}
+.title li>p{
+    font: 90px 'StrongSword_Pure';
+    color: #fff;
+}
+.title li span{
+    font:  32px 'StrongSword_Mixed';
+    color: rgb(159, 159, 186) ;
+}
+
+/* 활성화 */
+.title li.on{ opacity: 1; left: 260px;}
+
+
+/* 캐릭터이미지 */
+.pic{}
+.pic>p{
+    position: fixed; 
+    top: 0; right: -1000px;
+    z-index: 7;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.pic>p>img{
+    width: 66vw;
+}
+
+/* 캐릭터 동적모션 커스텀 */
+
+.pic p:nth-child(2){transform:translateY(0px) ;}
+.pic p:nth-child(2).on{transform:translateY(50px) ;}
+
+.pic p:nth-child(3){transform: translateY(0px)  ;}
+.pic p:nth-child(3).on{transform: translateY(50px) ;}
+
+/* 활성화 */
+.pic>p.on{opacity: 1; right: -90px;}
+
+.box_list{
+   bottom: 0; left: 0;
+    position: fixed;
+    display: flex;
+    z-index: 7;
+}
+
+.box_list>li{
+display: none;
+transition: all .5s;
+position: absolute;
+left: 1000px;
+bottom: 20px;
+
+}
+
+.box_list>li.on{
+    display: block;
+    left: 714px;
+
+
+}

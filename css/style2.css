@@ -1,0 +1,351 @@
+/* 배경동영상 */
+.bgimg{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* background: url(../img/0161e67f0477ccccc.png) no-repeat center/cover; */
+    top: -18px;
+}
+
+.bgimg>li{
+    width: 150%;
+    height: 120%;
+    display: none;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.bgimg>li.on{
+    display: block;
+    opacity: 1;
+}
+
+.bgimg>li:nth-child(1){
+position: fixed;
+top: 44%; left: 60%;
+transform: translate(-50%,-50%);
+background: url(../img/0161e67f0477vv.png) no-repeat center/cover;
+}
+.bgimg>li:nth-child(2){
+    position: fixed;
+    top: 47%; left: 60%;
+    transform: translate(-50%,-50%);
+background: url(../img/Untitled-1xxx.png) no-repeat center/cover;
+}
+.bgimg>li:nth-child(3){
+    position: fixed;
+    top: 54%; left: 60%;
+    transform: translate(-50%,-50%);
+background: url(../img/Untitled-2.png) no-repeat center/cover;
+}
+
+
+
+
+/* 로고 */
+.logo{position: fixed; top: 23px; left: 60px; z-index: 10;
+}
+.logo>a{}
+.logo>a>img{
+    width: 246px; height: 107px;
+}
+
+/* 헤더 */
+
+/* https://cssgradient.io/ */
+
+header{
+    width: 900px; height: 100vh;
+    /* background: rgb(222,202,223);
+    background: linear-gradient(222deg, rgba(222,202,223,1) 0%, rgba(160,197,199,1) 100%); */
+    backdrop-filter: blur(17px) saturate(180%);
+    -webkit-backdrop-filter: blur(17px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.47);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    position: fixed; top: 0; left: -450px;
+    z-index: 3;
+    transform: skewX(0deg);
+}
+#gnb{
+    position: absolute;
+    top: 190px; right: 0;
+    width: 220px;
+
+}
+/* 1depth */
+#gnb>li{position: relative;}
+#gnb>li>a{
+    display: block;
+    width: 100%;
+    padding: 15px 0 15px 30px;
+    box-sizing: border-box;
+    font: 18px 'arial';
+    color: #111;
+}
+#gnb em{
+    display: block;
+    transform: skewX(40deg);
+}
+/* 2depth */
+#gnb>li>ul{
+   position: absolute; top: 0; left: 0;
+   transition: all 0.5s;
+   opacity: 0;
+}
+
+#gnb>li>ul>li>a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    font: bold 16px/40px 'arial';
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    border-bottom: 4px solid rgba(0,212,255,1); 
+    transition: all 0.5s;
+}
+
+
+/* gnb 호버효과 */
+#gnb>li.on>a{
+    background-color: #111;
+    color: #fff;
+}
+#gnb>li:hover>a{
+    background-color: #111;
+    color: #fff;
+}
+
+#gnb>li.on>ul{
+    left: 220px;
+    opacity: 0.9;
+}
+#gnb>li:hover>ul{
+    left: 220px;
+    opacity: 0.9;
+}
+
+
+/* sns */
+#sns{
+    position: fixed;
+    top: 39px; right: 28px;
+    z-index: 8;
+    display: flex;
+}
+#sns>li{margin-right: 20px;}
+#sns>li>a{}
+#sns>li>a>i{
+    font-size: 36px; color: #000; opacity: 0.7;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+
+/* 호버효과 */
+#sns>li>a>i:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* 캐릭터 선택 버튼 */
+.btn_list{
+    position: fixed;
+    display: flex;
+
+    bottom: 43px;
+    left: 551px;
+    z-index: 6;
+}
+.btn_list li{margin-right: 8px;
+    width: 120px;
+	height: 60px;
+background-color: #fff;
+border-radius: 10px;
+overflow: hidden;
+margin-bottom: 16px;
+transition: all .5s;
+}
+
+.btn_list li.active{
+    display: block;
+    background-color: #373737;
+   margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+.btn_list a{
+    display: block;
+    width: 120px;
+	height: 60px;
+}
+
+.btn_list .ch1{
+   background: url(../img/Untitled-1.png) no-repeat -268px -83px;
+}
+.btn_list .ch2{
+
+    background: url(../img/Untitled-1.png) no-repeat -131px -83px;
+
+
+}
+.btn_list .ch3{
+   
+    background: url(../img/Untitled-1.png) no-repeat -10px -83px;
+
+
+
+}
+
+/* 활성화
+http://www.spritecow.com/
+*/
+.btn_list>li.on .ch1{
+    background: url(../img/Untitled-1.png) no-repeat -268px 0;
+
+}
+
+.btn_list>li.on .ch2{
+    background: url(../img/Untitled-1.png) no-repeat -131px 0;
+
+
+
+
+}
+.btn_list>li.on .ch3{
+
+    background: url(../img/Untitled-1.png) no-repeat -10px 0;
+
+
+}
+
+/* 캐릭터 텍스트 */
+.title{}
+.title li{position: fixed; bottom: 394px; left: 45px; opacity: 0; transition: all 0.5s; z-index: 5;
+text-align: left;}
+.title li>p{
+    font: 90px 'StrongSword_Pure';
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.title li span{
+    font:  32px 'StrongSword_Mixed';
+    color:#000 ;
+}
+
+
+.title li h3{
+    font:  14px 'StrongSword_Mixed';
+    color:#000 ;
+    line-height: 32px;
+    margin-top: 40px;
+}
+
+/* 활성화 */
+.title li.on{ opacity: 1;}
+
+
+/* 캐릭터이미지 */
+.pic{}
+.pic>p{
+    position: fixed; 
+    top: 0; right: -1000px;
+    z-index: 7;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.pic>p>img{
+    width: 66vw;
+}
+
+/* 캐릭터 동적모션 커스텀 */
+
+.pic p:nth-child(2){transform:translateY(0px) ;}
+.pic p:nth-child(2).on{transform:translateY(50px) ;}
+
+.pic p:nth-child(3){transform: translateY(0px)  ;}
+.pic p:nth-child(3).on{transform: translateY(50px) ;}
+
+/* 활성화 */
+.pic>p.on{opacity: 1; right: -331px;}
+
+.box_list{
+   bottom: 0; left: 394px;
+    position: fixed;
+    display: flex;
+    z-index: 7;
+
+
+}
+
+.box_list>li{
+opacity: 0;
+    transition: all .5s;
+position: absolute;
+left: 1000px;
+bottom: 20px;
+box-shadow: 5px 5px 5px black;
+transition: all 1s;
+}
+
+.box_list>li.on{
+opacity: 1;
+    left: 714px;
+
+
+}
+
+.download{
+    position: fixed;
+    bottom: 61px; left: 70px;
+    z-index: 11;
+}
+
+.download>li{
+   
+    margin-bottom: 10px;
+}
+
+.download li:nth-child(1) a{
+display: block;
+width: 200px;
+height: 60px;
+background: url(../img/ae8a2c55eafd.png) no-repeat center/cover;
+transition: all .3s;
+}
+
+.download li:nth-child(1):hover a{
+background: url(../img/9fa937f3a0f0.png) no-repeat center/cover;
+
+}
+
+.download li:nth-child(2) a{
+    display: block;
+    width: 200px;
+    height: 60px;
+    background: url(../img/ko_appstore.svg) no-repeat center/cover;
+    }
+
+    .download li:nth-child(2):hover a{
+background: url(../img/ko_appstore\ 1.png) no-repeat center/cover;
+
+}
+    
+    .download li:nth-child(3) a{
+        display: block;
+        width: 200px;
+height: 60px;
+        background: url(../img/ko_googleplay.svg) no-repeat center/cover;
+        }
+        
+        .download li:nth-child(3):hover a{
+background: url(../img/ko_googleplay\ 1.png) no-repeat center/cover;
+
+}
+
